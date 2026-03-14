@@ -20,24 +20,24 @@ export function TimeWidget() {
   return (
     <div
       className={cn(
-        "rounded-[1.7rem] border border-gold/12 bg-black/20 p-4",
+        "rounded-[1.55rem] border border-gold/12 bg-black/20 p-3.5",
         dir === "rtl" ? "text-right" : "text-left",
       )}
     >
       <div className={cn("flex items-center justify-between gap-4", dir === "rtl" ? "flex-row-reverse" : "flex-row")}>
-        <div className="rounded-2xl bg-amber-200/10 p-3 text-gold">
-          <Clock3 className="h-6 w-6" />
+        <div className="rounded-[1.1rem] bg-amber-200/10 p-2.5 text-gold">
+          <Clock3 className="h-5 w-5" />
         </div>
         <div>
-          <p className="font-display text-4xl leading-none text-foreground md:text-5xl">
+          <p className="font-display text-[2.2rem] leading-none text-foreground md:text-[2.7rem]">
             {formatDisplayTime(now, language)}
           </p>
-          <p className="mt-2 text-sm text-white/55">{t("time.welcome")}</p>
+          <p className="mt-1.5 text-[0.83rem] text-white/55 md:text-sm">{t("time.welcome")}</p>
         </div>
       </div>
       <div
         className={cn(
-          "mt-4 flex items-center gap-2 text-sm text-white/58",
+          "mt-3 flex items-center gap-2 text-[0.83rem] text-white/58 md:text-sm",
           dir === "rtl" ? "justify-end" : "justify-start",
         )}
       >
