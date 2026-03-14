@@ -9,14 +9,15 @@ export function LightingScreen() {
   const toggleDevice = useControlStore((state) => state.toggleDevice);
 
   return (
-    <div>
+    <div className="space-y-4 lg:space-y-5">
       <SectionHeading
         eyebrow={t("lighting.eyebrow")}
         title={t("lighting.title")}
         description={t("lighting.description")}
+        compact
       />
 
-      <div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4 2xl:grid-cols-5">
         {devices.map((device) => (
           <DeviceCard
             key={device.id}
