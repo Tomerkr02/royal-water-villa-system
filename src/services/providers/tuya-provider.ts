@@ -66,11 +66,15 @@ export const tuyaProvider: DeviceProvider & SceneProvider = {
       throw new Error(`No Tuya mapping configured for local device '${deviceId}'.`);
     }
 
-    const requestUrl = "/api/tuya/device-access";
+    const requestUrl = "/api/tuya/control";
     const requestBody = {
       deviceId: mapping.tuyaDeviceId,
-      commandCode: mapping.commandCode,
-      value: isOn,
+      commands: [
+        {
+          code: mapping.commandCode,
+          value: isOn,
+        },
+      ],
     };
 
     console.log("[Tuya provider] API route called", {
@@ -83,7 +87,7 @@ export const tuyaProvider: DeviceProvider & SceneProvider = {
       requestBody,
     });
 
-    const payload = await getJson<{ success: true; message: string; result?: unknown }>(requestUrl, {
+    const payload = await getJson<{ success: true; result?: unknown }>(requestUrl, {
       method: "POST",
       body: JSON.stringify(requestBody),
     });
@@ -98,7 +102,7 @@ export const tuyaProvider: DeviceProvider & SceneProvider = {
 
     return {
       success: true,
-      message: payload.message,
+      message: isOn ? "פקודת ON נשלחה להתקן." : "פקודת OFF נשלחה להתקן.",
     };
   },
 

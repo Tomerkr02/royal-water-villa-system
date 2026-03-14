@@ -28,7 +28,7 @@ type HttpMethod = "GET" | "POST";
 interface TuyaCommandRequestBody {
   commands: Array<{
     code: string;
-    value: boolean;
+    value: boolean | number | string;
   }>;
 }
 
@@ -108,17 +108,6 @@ function logSigningDebug(context: SignedRequestContext) {
     signInput: context.signInput,
     sign: context.sign,
   });
-}
-
-function buildTuyaCommandRequestBody(commandCode: string, value: boolean): TuyaCommandRequestBody {
-  return {
-    commands: [
-      {
-        code: commandCode,
-        value,
-      },
-    ],
-  };
 }
 
 function createPendingCommandKey(deviceId: string, commandCode: string) {
@@ -433,14 +422,32 @@ export async function getTuyaDeviceDirectAccess(deviceId: string): Promise<TuyaD
 }
 
 export async function sendTuyaCommand(deviceId: string, commandCode: string, value: boolean) {
+  return sendTuyaCommands(deviceId, [
+    {
+      code: commandCode,
+      value,
+    },
+  ]);
+}
+
+export async function sendTuyaCommands(
+  deviceId: string,
+  commands: Array<{
+    code: string;
+    value: boolean | number | string;
+  }>,
+) {
   const token = await getAccessToken();
-  const commandBody = buildTuyaCommandRequestBody(commandCode, value);
+  const commandBody: TuyaCommandRequestBody = { commands };
 
   console.log("[Tuya command dispatch]", {
     deviceId,
     endpoint: `/v1.0/devices/${deviceId}/commands`,
     body: commandBody,
-    valueType: typeof value,
+    commandValueTypes: commands.map((command) => ({
+      code: command.code,
+      valueType: typeof command.value,
+    })),
   });
 
   const response = await requestTuya<{ success: boolean }>(
@@ -454,7 +461,11 @@ export async function sendTuyaCommand(deviceId: string, commandCode: string, val
     throw new Error(response.msg ?? `Failed to send Tuya command to ${deviceId}`);
   }
 
-  recordPendingCommandState(deviceId, commandCode, value);
+  commands.forEach((command) => {
+    if (typeof command.value === "boolean") {
+      recordPendingCommandState(deviceId, command.code, command.value);
+    }
+  });
 
   return response.result;
 }
