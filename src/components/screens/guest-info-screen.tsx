@@ -1,19 +1,21 @@
 import { GuestInfoCard } from "@/components/ui/guest-info-card";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { useI18n } from "@/lib/i18n";
 import { useControlStore } from "@/store/control-store";
 
 export function GuestInfoScreen() {
+  const { t } = useI18n();
   const guestInfo = useControlStore((state) => state.guestInfo);
 
   return (
-    <div>
+    <div className="space-y-8">
       <SectionHeading
-        eyebrow="מידע לאורח"
-        title="כל מה שחשוב לדעת במהלך השהייה"
-        description="מסך תוכן נקי וקריא שמבוסס על קונפיגורציה, כך שניתן לעדכן בקלות פרטי Wi-Fi, כללי המקום, מידע על הבריכה ושעות הצ'ק אין והצ'ק אאוט."
+        eyebrow={t("guest.eyebrow")}
+        title={t("guest.title")}
+        description={t("guest.description")}
       />
 
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-5 md:grid-cols-2 xl:gap-6">
         {guestInfo.map((item) => (
           <GuestInfoCard key={item.id} item={item} />
         ))}

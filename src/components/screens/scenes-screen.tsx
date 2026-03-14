@@ -1,8 +1,10 @@
 import { SceneCard } from "@/components/ui/scene-card";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { useI18n } from "@/lib/i18n";
 import { useControlStore } from "@/store/control-store";
 
 export function ScenesScreen() {
+  const { t } = useI18n();
   const scenes = useControlStore((state) => state.scenes);
   const selectedSceneId = useControlStore((state) => state.selectedSceneId);
   const activateScene = useControlStore((state) => state.activateScene);
@@ -10,9 +12,9 @@ export function ScenesScreen() {
   return (
     <div>
       <SectionHeading
-        eyebrow="מצבים"
-        title="אווירה מוכנה בלחיצה אחת"
-        description="אוסף מצבים שנבנו כדי להתאים לרגעים שונים בשהייה: הגעה, ערב, אירוח ליד הבריכה, לילה רגוע או יציאה מהווילה."
+        eyebrow={t("scenes.eyebrow")}
+        title={t("scenes.title")}
+        description={t("scenes.description")}
       />
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

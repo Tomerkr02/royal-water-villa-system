@@ -1,14 +1,13 @@
 "use client";
 
 import { create } from "zustand";
-import { contactActionsSeed } from "@/data/contact-actions";
 import { guestInfoSeed } from "@/data/guest-info";
 import { getTuyaMappingByLocalDeviceId } from "@/config/tuya-device-mapping";
+import { getCurrentUiLanguage, translate } from "@/lib/i18n";
 import { deviceService } from "@/services/device-service";
 import { getProviderName } from "@/services/provider-registry";
 import { sceneService } from "@/services/scene-service";
 import type {
-  ContactAction,
   Device,
   GuestInfoItem,
   OperationResult,
@@ -30,7 +29,6 @@ interface ControlState {
   devices: Device[];
   scenes: Scene[];
   guestInfo: GuestInfoItem[];
-  contactActions: ContactAction[];
   selectedSceneId?: string;
   booting: boolean;
   loading: boolean;
@@ -59,12 +57,18 @@ function createToast(title: string, message: string, tone: ToastTone): Toast {
 function pushResultToast(
   set: (partial: Partial<ControlState> | ((state: ControlState) => Partial<ControlState>)) => void,
   result: OperationResult,
-  successTitle: string,
+  titleKey: string,
+  messageKey: string,
 ) {
+  const language = getCurrentUiLanguage();
   set((state) => ({
     toasts: [
       ...state.toasts,
-      createToast(successTitle, result.message, result.success ? "success" : "error"),
+      createToast(
+        translate(language, titleKey),
+        result.success ? translate(language, messageKey) : result.message,
+        result.success ? "success" : "error",
+      ),
     ],
   }));
 }
@@ -74,7 +78,6 @@ export const useControlStore = create<ControlState>((set, get) => ({
   devices: [],
   scenes: [],
   guestInfo: guestInfoSeed,
-  contactActions: contactActionsSeed,
   selectedSceneId: undefined,
   booting: true,
   loading: false,
@@ -96,7 +99,9 @@ export const useControlStore = create<ControlState>((set, get) => ({
       });
     } catch (error) {
       const message =
-        error instanceof Error ? error.message : "לא ניתן היה לטעון את מצב המערכת.";
+        error instanceof Error
+          ? error.message
+          : translate(getCurrentUiLanguage(), "common.loadingErrorMessage");
 
       set({ loading: false });
       pushResultToast(
@@ -105,7 +110,8 @@ export const useControlStore = create<ControlState>((set, get) => ({
           success: false,
           message,
         },
-        "שגיאת טעינה",
+        "common.loadingErrorTitle",
+        "common.loadingErrorMessage",
       );
     }
 
@@ -152,11 +158,14 @@ export const useControlStore = create<ControlState>((set, get) => ({
       });
 
       set({ devices, loading: false });
-      pushResultToast(set, result, "הפקודה נשלחה");
+      pushResultToast(set, result, "common.commandSentTitle", "common.commandSentMessage");
     } catch (error) {
-      const message = error instanceof Error ? error.message : "נכשלה שליחת הפקודה להתקן.";
+      const message =
+        error instanceof Error
+          ? error.message
+          : translate(getCurrentUiLanguage(), "common.commandFailedMessage");
       set({ loading: false });
-      pushResultToast(set, { success: false, message }, "הפקודה נכשלה");
+      pushResultToast(set, { success: false, message }, "common.commandFailedTitle", "common.commandFailedMessage");
     }
   },
 
@@ -167,11 +176,14 @@ export const useControlStore = create<ControlState>((set, get) => ({
       const devices = await deviceService.getDevices();
 
       set({ devices, loading: false });
-      pushResultToast(set, result, "המצב הופעל");
+      pushResultToast(set, result, "common.sceneActivatedTitle", "common.sceneActivatedMessage");
     } catch (error) {
-      const message = error instanceof Error ? error.message : "נכשלה הפעלת המצב.";
+      const message =
+        error instanceof Error
+          ? error.message
+          : translate(getCurrentUiLanguage(), "common.sceneErrorMessage");
       set({ loading: false });
-      pushResultToast(set, { success: false, message }, "שגיאת מצב");
+      pushResultToast(set, { success: false, message }, "common.sceneErrorTitle", "common.sceneErrorMessage");
     }
   },
 
@@ -182,11 +194,14 @@ export const useControlStore = create<ControlState>((set, get) => ({
       const devices = await deviceService.getDevices();
 
       set({ devices, loading: false });
-      pushResultToast(set, result, "כל התאורות כובו");
+      pushResultToast(set, result, "common.allOffTitle", "common.allOffMessage");
     } catch (error) {
-      const message = error instanceof Error ? error.message : "נכשל כיבוי כלל התאורות.";
+      const message =
+        error instanceof Error
+          ? error.message
+          : translate(getCurrentUiLanguage(), "common.allOffErrorMessage");
       set({ loading: false });
-      pushResultToast(set, { success: false, message }, "שגיאת כיבוי");
+      pushResultToast(set, { success: false, message }, "common.allOffErrorTitle", "common.allOffErrorMessage");
     }
   },
 

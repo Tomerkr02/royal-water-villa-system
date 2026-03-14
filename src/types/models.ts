@@ -2,7 +2,7 @@ import type { LucideIcon } from "lucide-react";
 
 export type DeviceCategory = "lighting";
 export type DeviceStatus = "on" | "off";
-export type ScreenKey = "home" | "lighting" | "scenes" | "guest" | "contact";
+export type ScreenKey = "home" | "lighting" | "scenes" | "guest";
 
 export interface Device {
   id: string;
@@ -33,16 +33,14 @@ export interface Scene {
 export interface GuestInfoItem {
   id: string;
   title: string;
-  value: string;
-  description: string;
-}
-
-export interface ContactAction {
-  id: string;
-  label: string;
-  description: string;
-  href: string;
-  icon: LucideIcon;
+  value?: string;
+  description?: string;
+  entries?: Array<{
+    label: string;
+    value: string;
+  }>;
+  bulletPoints?: string[];
+  emphasis?: string;
 }
 
 export interface OperationResult {

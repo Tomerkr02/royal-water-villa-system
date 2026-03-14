@@ -11,16 +11,16 @@ export function delay(ms: number) {
   });
 }
 
-export function formatDisplayDate(date: Date) {
-  return new Intl.DateTimeFormat("he-IL", {
+export function formatDisplayDate(date: Date, language = "he") {
+  return new Intl.DateTimeFormat(language === "en" ? "en-US" : "he-IL", {
     weekday: "long",
     month: "long",
     day: "numeric",
   }).format(date);
 }
 
-export function formatDisplayTime(date: Date) {
-  return new Intl.DateTimeFormat("he-IL", {
+export function formatDisplayTime(date: Date, language = "he") {
+  return new Intl.DateTimeFormat(language === "en" ? "en-US" : "he-IL", {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,

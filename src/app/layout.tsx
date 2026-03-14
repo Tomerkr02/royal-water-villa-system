@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Frank_Ruhl_Libre, Heebo } from "next/font/google";
 import "./globals.css";
 import { PwaRegistrar } from "@/components/pwa/pwa-registrar";
+import { I18nProvider } from "@/lib/i18n";
 
 const heebo = Heebo({
   variable: "--font-heebo",
@@ -50,8 +51,10 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl" suppressHydrationWarning>
       <body className={`${heebo.variable} ${frankRuhl.variable} antialiased`}>
-        <PwaRegistrar />
-        {children}
+        <I18nProvider>
+          <PwaRegistrar />
+          {children}
+        </I18nProvider>
       </body>
     </html>
   );

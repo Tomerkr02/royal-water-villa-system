@@ -55,6 +55,24 @@ export const tuyaDeviceMapping: TuyaMappingEntry[] = [
     commandCode: "switch_2",
     channelLabel: "Bathroom Light",
   },
+  {
+    localDeviceId: "ceilingFan",
+    tuyaDeviceId: "bfed21a4097abed981lg6y",
+    commandCode: "switch",
+    channelLabel: "Ceiling Fan",
+  },
+  {
+    localDeviceId: "ceilingFanLight",
+    tuyaDeviceId: "bfed21a4097abed981lg6y",
+    commandCode: "light",
+    channelLabel: "Fan Light",
+  },
+  {
+    localDeviceId: "bathroomHeater",
+    tuyaDeviceId: "bfeb1883831883a9225uan",
+    commandCode: "switch",
+    channelLabel: "Bathroom Heater",
+  },
 ];
 
 export function getTuyaMappingByLocalDeviceId(localDeviceId: string) {
