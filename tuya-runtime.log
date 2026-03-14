@@ -1,0 +1,837 @@
+
+> royal-water-villa-control@0.1.0 start
+> next start
+
+▲ Next.js 16.1.6
+- Local:         http://localhost:3002
+- Network:       http://10.100.102.45:3002
+
+✓ Starting...
+✓ Ready in 970ms
+[Tuya device-access route] request received {
+  finalTuyaDeviceId: 'bffcde940e008e6f8bsiaj',
+  finalCommandCode: 'switch_1',
+  requestUrl: '/api/tuya/device-access',
+  requestBody: {
+    commandCode: 'switch_1',
+    value: true,
+    deviceId: 'bffcde940e008e6f8bsiaj'
+  }
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax177348609705942d56d71-983a-4ae5-ab91-48c9867dbfd6GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: 'A0194F91984D3F18C01B7C5D40E1D74BECE76ADE398ACF155DE68BDD5CA921F7'
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax1773486097410adf3c6d7-e94f-47a6-b25b-365e26778d49GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: 'C93A02F39028C1196F46079FFB4474B0581738F1265D29F177EA61065C04BD48'
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax1773486097417874a753d-7856-42f7-a832-9d270e204247GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: '1E2D604FB51B3B9890936B38B38D1D7716BC6E3C12F09ED6230B40ACB63EC865'
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax1773486097422644048c6-256d-4a77-a37c-30b9c1e39bf6GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: '083C1C4018C92B58EFAC3A85000F0CF1F80D6CEAE1C5DB30784056A9BE65E8DF'
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax177348609742776bd53f1-ea2e-4f46-999a-850ac74c5c72GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: 'D154B607232F92BE440CB47C2D493BDB795ECE5FA6BF86E45C11CB0B03B8971E'
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax1773486097433898c2fd4-5f50-4ad2-bcce-bd042711c3beGET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: '21BD2D49902C132A331BED8F0693343C3F2AD07D4DA311F3104423158EF5BA1B'
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax177348609743731a96398-e0e8-4dfe-9431-af8a2bd93ae0GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: 'ADA37908655788C6E461BC27FE2A031027302AF5BBB25A552E711878CBD903E4'
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax17734860974414cbb7892-b29e-4f0f-a283-926d4d68101aGET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: 'D89AAD744707140F4E06D6E8D30B05E5069A0387BD07F4EC549311DCCB891565'
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax1773486097449c1a9ba4c-53f9-478a-942a-b633ab015ac9GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: 'CD7C025203867E916CC83FC774583809A1E792482276F004C1353A54A60216E3'
+}
+[Tuya signing debug] {
+  requestType: 'token',
+  method: 'GET',
+  path: '/v1.0/token',
+  sortedQuery: 'grant_type=1',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  signInput: 'vky3vvhds7498ptvusax177348609745472ad7b81-f14f-4be2-86f3-01e32548c851GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/token?grant_type=1',
+  sign: '6A5F8E930EFDAEEBC167288F4AD6F885EC4E859F0A40DCF6BE27FA522C41958A'
+}
+[Tuya command dispatch] {
+  deviceId: 'bffcde940e008e6f8bsiaj',
+  endpoint: '/v1.0/devices/bffcde940e008e6f8bsiaj/commands',
+  body: { commands: [ [Object] ] },
+  valueType: 'boolean'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'POST',
+  path: '/v1.0/devices/bffcde940e008e6f8bsiaj/commands',
+  sortedQuery: '',
+  bodySha256: '00c2368c059275b6f529e038fc079d641a933173858053bf72070d768d072f0e',
+  stringToSign: 'POST\n' +
+    '00c2368c059275b6f529e038fc079d641a933173858053bf72070d768d072f0e\n' +
+    '\n' +
+    '/v1.0/devices/bffcde940e008e6f8bsiaj/commands',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097480786223a2-f037-4580-aaa6-5264b57c706ePOST\n' +
+    '00c2368c059275b6f529e038fc079d641a933173858053bf72070d768d072f0e\n' +
+    '\n' +
+    '/v1.0/devices/bffcde940e008e6f8bsiaj/commands',
+  sign: 'D895E2B511A0B70792DA603A4FFA4239DB39C57C435B4D9F125A0388E17D1145'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfa046217ed22cbb88x6mw',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfa046217ed22cbb88x6mw',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097738b0b8abb1-fcde-4515-90d1-6df7da26686dGET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfa046217ed22cbb88x6mw',
+  sign: 'D9AF75E125F29CAEA49B01C060624CAD6E5B6AD05316707B670EF4E2FBEA0C73'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfa046217ed22cbb88x6mw/functions',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfa046217ed22cbb88x6mw/functions',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097740f5adcbe4-b870-4a60-9a91-f97934a753efGET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfa046217ed22cbb88x6mw/functions',
+  sign: 'FBCFA3000894FA2AC8315CAAA160D762B2C17C6B2D5E7DD4769FAE9727D46F76'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfe6a09f4ad1838449xayz',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfe6a09f4ad1838449xayz',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e7177348609775027cffdaa-395f-4db8-948d-5fe3702d5dbaGET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfe6a09f4ad1838449xayz',
+  sign: '28443E15F0704BC579367E48CB86CB70BB1AA5981102C30DA3122A2A311A7B6C'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfe6a09f4ad1838449xayz/functions',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfe6a09f4ad1838449xayz/functions',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e717734860977526f15dc90-bf4c-4149-8e83-edc69d1ab5f3GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfe6a09f4ad1838449xayz/functions',
+  sign: 'A8BEA0C5F322CDB1256849367E1EDE5F299F11758AF2BC482FA9465E229B134F'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfb7a879c0ebf0c6e66lc2',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfb7a879c0ebf0c6e66lc2',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097760d235beac-6bd0-4354-bdd1-2df7a693c538GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfb7a879c0ebf0c6e66lc2',
+  sign: 'E769A320C09F39994A7C8DA5E8B9E4D125EE3BD80BAADD0FE7435DE7C818907A'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfb7a879c0ebf0c6e66lc2/functions',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfb7a879c0ebf0c6e66lc2/functions',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097763c66d785b-df00-419e-968f-39085148235aGET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfb7a879c0ebf0c6e66lc2/functions',
+  sign: 'C6A5EDCE5C2E35E2E5509E00FC7471C687C0CE1BE27B709F491DFF32490E7E9B'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bf2af07eae210d7a388lkx',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bf2af07eae210d7a388lkx',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e717734860977727ddb8f08-89a4-4b30-ab69-7521ab888fcaGET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bf2af07eae210d7a388lkx',
+  sign: '32CF753D72547764EA30801993D8AD7E7FB7C5CAC78B7AAC2F7C9A4BEB1BB051'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bf2af07eae210d7a388lkx/functions',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bf2af07eae210d7a388lkx/functions',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e7177348609777524c81c43-7c94-48ea-8b49-fdec43ed927eGET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bf2af07eae210d7a388lkx/functions',
+  sign: '91DB1E71A88FAE8F28D31923E71B2FC1AC72A9AB8BCB7B46A41347F544C3C005'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bf2af07eae210d7a388lkx',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bf2af07eae210d7a388lkx',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e7177348609778422920b8e-c62f-45cb-8d87-e24a1fda23b4GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bf2af07eae210d7a388lkx',
+  sign: '5254DDB0DBBCB18F8C516C6EB368A55C5D80807B1B66DA8437E7B5C48C234BAE'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bf2af07eae210d7a388lkx/functions',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bf2af07eae210d7a388lkx/functions',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097787f2313829-1e46-4478-aeec-9fd69cdc47a9GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bf2af07eae210d7a388lkx/functions',
+  sign: '3A053551624271B9538D5C61272191A4819C9D5B0B17FC8ED16FD2C2804F8DAF'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfe6a09f4ad1838449xayz',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfe6a09f4ad1838449xayz',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e7177348609779843f5064f-d6f0-47d6-880c-dd4a6a6595b1GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfe6a09f4ad1838449xayz',
+  sign: '1229807A5956206586B1AD633BD255C55A8FE1A7116A6394BD78A08C74588E0E'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfe6a09f4ad1838449xayz/functions',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfe6a09f4ad1838449xayz/functions',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097800efac566f-3cde-46a2-b053-52c2b8c5c130GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfe6a09f4ad1838449xayz/functions',
+  sign: '9A6A0030AD2B4892534BBED8A0C46EDF22E2BEF69487633A080AAD9F3E1C8C33'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfae97a0468699bf6es1mx',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfae97a0468699bf6es1mx',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097804dac697a3-512e-4ff1-b02e-98db32f96702GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfae97a0468699bf6es1mx',
+  sign: '29DE3ECDA0E4476048EF7651E44D560A6288B888DA79176FB9F47986D806B4FE'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfae97a0468699bf6es1mx/functions',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfae97a0468699bf6es1mx/functions',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e7177348609780605636e27-c8f2-454c-9087-3b010c3ac026GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfae97a0468699bf6es1mx/functions',
+  sign: '8759A215F1F9C97CD97C0C5980CF5AD10637660CFFEE591E316FD0DE51B1CC25'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bffcde940e008e6f8bsiaj',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bffcde940e008e6f8bsiaj',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097811f212c63d-8045-4a38-aaf0-34aa34045322GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bffcde940e008e6f8bsiaj',
+  sign: '4645ACBCE17B7311A3F94AEE2C1C5CCEE2E1C452D95F2943DD2F608C90153180'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bffcde940e008e6f8bsiaj/functions',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bffcde940e008e6f8bsiaj/functions',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e7177348609781467801a64-8b5d-4385-8ddb-cf53516e82f1GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bffcde940e008e6f8bsiaj/functions',
+  sign: 'EEEE50C2C38ACBFF734E789B3F6EADBC580CA49D6AF0836C55648329CA527B56'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfae97a0468699bf6es1mx',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfae97a0468699bf6es1mx',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097853ef8de976-4d8a-400c-ad4a-87a748cc0e88GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfae97a0468699bf6es1mx',
+  sign: 'C311E7FF10883DA5BF4C6192774C95942E161AB4618ED9FC9D4D249E805BECEA'
+}
+[Tuya signing debug] {
+  requestType: 'service',
+  method: 'GET',
+  path: '/v1.0/devices/bfae97a0468699bf6es1mx/functions',
+  sortedQuery: '',
+  bodySha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+  stringToSign: 'GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfae97a0468699bf6es1mx/functions',
+  signInput: 'vky3vvhds7498ptvusaxe1d49f3a5f1784c67a7ae5ff028db3e71773486097854cebd4498-4e4d-4ae6-8f76-2170507be184GET\n' +
+    'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n' +
+    '\n' +
+    '/v1.0/devices/bfae97a0468699bf6es1mx/functions',
+  sign: '3752827AA8423F5B9284AA6F4ED5411116B19D09468FCFE6A4C7F269D53A2A42'
+}
+[Tuya device-access route] response sent {
+  finalTuyaDeviceId: 'bffcde940e008e6f8bsiaj',
+  finalCommandCode: 'switch_1',
+  apiResponse: true
+}
+[Tuya local-devices] raw status payload {
+  localDeviceId: 'bathroomLight',
+  resolvedMapping: {
+    localDeviceId: 'bathroomLight',
+    tuyaDeviceId: 'bfe6a09f4ad1838449xayz',
+    commandCode: 'switch_2',
+    channelLabel: 'Bathroom Light'
+  },
+  tuyaDeviceId: 'bfe6a09f4ad1838449xayz',
+  commandCode: 'switch_2',
+  rawStatusPayload: [
+    { code: 'switch_1', value: false },
+    { code: 'switch_2', value: false },
+    { code: 'countdown_1', value: 0 },
+    { code: 'countdown_2', value: 0 },
+    { code: 'relay_status', value: '2' },
+    { code: 'random_time', value: '' },
+    { code: 'cycle_time', value: '' },
+    { code: 'switch_inching', value: 'AAACAgAC' },
+    { code: 'switch_type', value: 'flip' },
+    { code: 'switch_interlock', value: '' }
+  ],
+  matchedStatusEntry: { code: 'switch_2', value: false },
+  derivedState: false,
+  pendingState: null
+}
+[Tuya local-devices] resolved device state {
+  localDeviceId: 'bathroomLight',
+  resolvedMapping: {
+    localDeviceId: 'bathroomLight',
+    tuyaDeviceId: 'bfe6a09f4ad1838449xayz',
+    commandCode: 'switch_2',
+    channelLabel: 'Bathroom Light'
+  },
+  tuyaDeviceId: 'bfe6a09f4ad1838449xayz',
+  commandCode: 'switch_2',
+  matchedStatusEntry: { code: 'switch_2', value: false },
+  resolvedState: false
+}
+[Tuya local-devices] raw status payload {
+  localDeviceId: 'livingRoomLedWall',
+  resolvedMapping: {
+    localDeviceId: 'livingRoomLedWall',
+    tuyaDeviceId: 'bfae97a0468699bf6es1mx',
+    commandCode: 'switch_1',
+    channelLabel: 'Living Room LED Wall'
+  },
+  tuyaDeviceId: 'bfae97a0468699bf6es1mx',
+  commandCode: 'switch_1',
+  rawStatusPayload: [
+    { code: 'switch_1', value: false },
+    { code: 'switch_2', value: false },
+    { code: 'countdown_1', value: 0 },
+    { code: 'countdown_2', value: 0 },
+    { code: 'relay_status', value: '2' },
+    { code: 'random_time', value: '' },
+    { code: 'cycle_time', value: '' },
+    { code: 'switch_inching', value: 'AAACAgAC' },
+    { code: 'switch_type', value: 'flip' },
+    { code: 'switch_interlock', value: '' }
+  ],
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  derivedState: false,
+  pendingState: null
+}
+[Tuya local-devices] resolved device state {
+  localDeviceId: 'livingRoomLedWall',
+  resolvedMapping: {
+    localDeviceId: 'livingRoomLedWall',
+    tuyaDeviceId: 'bfae97a0468699bf6es1mx',
+    commandCode: 'switch_1',
+    channelLabel: 'Living Room LED Wall'
+  },
+  tuyaDeviceId: 'bfae97a0468699bf6es1mx',
+  commandCode: 'switch_1',
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  resolvedState: false
+}
+[Tuya local-devices] raw status payload {
+  localDeviceId: 'wallLight',
+  resolvedMapping: {
+    localDeviceId: 'wallLight',
+    tuyaDeviceId: 'bffcde940e008e6f8bsiaj',
+    commandCode: 'switch_1',
+    channelLabel: 'Wall Light'
+  },
+  tuyaDeviceId: 'bffcde940e008e6f8bsiaj',
+  commandCode: 'switch_1',
+  rawStatusPayload: [
+    { code: 'switch_1', value: true },
+    { code: 'countdown_1', value: 0 },
+    { code: 'relay_status', value: '2' },
+    { code: 'random_time', value: '' },
+    { code: 'cycle_time', value: '' },
+    { code: 'switch_inching', value: 'AAAC' },
+    { code: 'switch_type', value: 'flip' }
+  ],
+  matchedStatusEntry: { code: 'switch_1', value: true },
+  derivedState: true,
+  pendingState: { value: true, timestamp: 1773486097895 }
+}
+[Tuya local-devices] resolved device state {
+  localDeviceId: 'wallLight',
+  resolvedMapping: {
+    localDeviceId: 'wallLight',
+    tuyaDeviceId: 'bffcde940e008e6f8bsiaj',
+    commandCode: 'switch_1',
+    channelLabel: 'Wall Light'
+  },
+  tuyaDeviceId: 'bffcde940e008e6f8bsiaj',
+  commandCode: 'switch_1',
+  matchedStatusEntry: { code: 'switch_1', value: true },
+  resolvedState: true
+}
+[Tuya local-devices] raw status payload {
+  localDeviceId: 'outdoorWallLight',
+  resolvedMapping: {
+    localDeviceId: 'outdoorWallLight',
+    tuyaDeviceId: 'bfe6a09f4ad1838449xayz',
+    commandCode: 'switch_1',
+    channelLabel: 'Exterior Wall Light'
+  },
+  tuyaDeviceId: 'bfe6a09f4ad1838449xayz',
+  commandCode: 'switch_1',
+  rawStatusPayload: [
+    { code: 'switch_1', value: false },
+    { code: 'switch_2', value: false },
+    { code: 'countdown_1', value: 0 },
+    { code: 'countdown_2', value: 0 },
+    { code: 'relay_status', value: '2' },
+    { code: 'random_time', value: '' },
+    { code: 'cycle_time', value: '' },
+    { code: 'switch_inching', value: 'AAACAgAC' },
+    { code: 'switch_type', value: 'flip' },
+    { code: 'switch_interlock', value: '' }
+  ],
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  derivedState: false,
+  pendingState: null
+}
+[Tuya local-devices] resolved device state {
+  localDeviceId: 'outdoorWallLight',
+  resolvedMapping: {
+    localDeviceId: 'outdoorWallLight',
+    tuyaDeviceId: 'bfe6a09f4ad1838449xayz',
+    commandCode: 'switch_1',
+    channelLabel: 'Exterior Wall Light'
+  },
+  tuyaDeviceId: 'bfe6a09f4ad1838449xayz',
+  commandCode: 'switch_1',
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  resolvedState: false
+}
+[Tuya local-devices] raw status payload {
+  localDeviceId: 'pergolaLight',
+  resolvedMapping: {
+    localDeviceId: 'pergolaLight',
+    tuyaDeviceId: 'bfa046217ed22cbb88x6mw',
+    commandCode: 'switch_1',
+    channelLabel: 'Pergola Light'
+  },
+  tuyaDeviceId: 'bfa046217ed22cbb88x6mw',
+  commandCode: 'switch_1',
+  rawStatusPayload: [
+    { code: 'switch_1', value: false },
+    { code: 'countdown_1', value: 0 },
+    { code: 'relay_status', value: '2' },
+    { code: 'random_time', value: '' },
+    { code: 'cycle_time', value: '' },
+    { code: 'switch_inching', value: 'AAAC' },
+    { code: 'switch_type', value: 'flip' }
+  ],
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  derivedState: false,
+  pendingState: null
+}
+[Tuya local-devices] resolved device state {
+  localDeviceId: 'pergolaLight',
+  resolvedMapping: {
+    localDeviceId: 'pergolaLight',
+    tuyaDeviceId: 'bfa046217ed22cbb88x6mw',
+    commandCode: 'switch_1',
+    channelLabel: 'Pergola Light'
+  },
+  tuyaDeviceId: 'bfa046217ed22cbb88x6mw',
+  commandCode: 'switch_1',
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  resolvedState: false
+}
+[Tuya local-devices] raw status payload {
+  localDeviceId: 'barLight',
+  resolvedMapping: {
+    localDeviceId: 'barLight',
+    tuyaDeviceId: 'bf2af07eae210d7a388lkx',
+    commandCode: 'switch_1',
+    channelLabel: 'Bar Light'
+  },
+  tuyaDeviceId: 'bf2af07eae210d7a388lkx',
+  commandCode: 'switch_1',
+  rawStatusPayload: [
+    { code: 'switch_1', value: false },
+    { code: 'switch_2', value: false },
+    { code: 'countdown_1', value: 0 },
+    { code: 'countdown_2', value: 0 },
+    { code: 'relay_status', value: '2' },
+    { code: 'random_time', value: '' },
+    { code: 'cycle_time', value: '' },
+    { code: 'switch_inching', value: 'AAACAgAC' },
+    { code: 'switch_type', value: 'flip' },
+    { code: 'switch_interlock', value: '' }
+  ],
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  derivedState: false,
+  pendingState: null
+}
+[Tuya local-devices] resolved device state {
+  localDeviceId: 'barLight',
+  resolvedMapping: {
+    localDeviceId: 'barLight',
+    tuyaDeviceId: 'bf2af07eae210d7a388lkx',
+    commandCode: 'switch_1',
+    channelLabel: 'Bar Light'
+  },
+  tuyaDeviceId: 'bf2af07eae210d7a388lkx',
+  commandCode: 'switch_1',
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  resolvedState: false
+}
+[Tuya local-devices] raw status payload {
+  localDeviceId: 'rearPathLight',
+  resolvedMapping: {
+    localDeviceId: 'rearPathLight',
+    tuyaDeviceId: 'bfb7a879c0ebf0c6e66lc2',
+    commandCode: 'switch_1',
+    channelLabel: 'Rear Path Light'
+  },
+  tuyaDeviceId: 'bfb7a879c0ebf0c6e66lc2',
+  commandCode: 'switch_1',
+  rawStatusPayload: [
+    { code: 'switch_1', value: false },
+    { code: 'countdown_1', value: 0 },
+    { code: 'relay_status', value: '2' },
+    { code: 'random_time', value: '' },
+    { code: 'cycle_time', value: '' },
+    { code: 'switch_inching', value: 'AAAC' },
+    { code: 'switch_type', value: 'flip' }
+  ],
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  derivedState: false,
+  pendingState: null
+}
+[Tuya local-devices] resolved device state {
+  localDeviceId: 'rearPathLight',
+  resolvedMapping: {
+    localDeviceId: 'rearPathLight',
+    tuyaDeviceId: 'bfb7a879c0ebf0c6e66lc2',
+    commandCode: 'switch_1',
+    channelLabel: 'Rear Path Light'
+  },
+  tuyaDeviceId: 'bfb7a879c0ebf0c6e66lc2',
+  commandCode: 'switch_1',
+  matchedStatusEntry: { code: 'switch_1', value: false },
+  resolvedState: false
+}
+[Tuya local-devices] raw status payload {
+  localDeviceId: 'poolLight',
+  resolvedMapping: {
+    localDeviceId: 'poolLight',
+    tuyaDeviceId: 'bf2af07eae210d7a388lkx',
+    commandCode: 'switch_2',
+    channelLabel: 'Pool Light'
+  },
+  tuyaDeviceId: 'bf2af07eae210d7a388lkx',
+  commandCode: 'switch_2',
+  rawStatusPayload: [
+    { code: 'switch_1', value: false },
+    { code: 'switch_2', value: false },
+    { code: 'countdown_1', value: 0 },
+    { code: 'countdown_2', value: 0 },
+    { code: 'relay_status', value: '2' },
+    { code: 'random_time', value: '' },
+    { code: 'cycle_time', value: '' },
+    { code: 'switch_inching', value: 'AAACAgAC' },
+    { code: 'switch_type', value: 'flip' },
+    { code: 'switch_interlock', value: '' }
+  ],
+  matchedStatusEntry: { code: 'switch_2', value: false },
+  derivedState: false,
+  pendingState: null
+}
+[Tuya local-devices] resolved device state {
+  localDeviceId: 'poolLight',
+  resolvedMapping: {
+    localDeviceId: 'poolLight',
+    tuyaDeviceId: 'bf2af07eae210d7a388lkx',
+    commandCode: 'switch_2',
+    channelLabel: 'Pool Light'
+  },
+  tuyaDeviceId: 'bf2af07eae210d7a388lkx',
+  commandCode: 'switch_2',
+  matchedStatusEntry: { code: 'switch_2', value: false },
+  resolvedState: false
+}
+[Tuya local-devices] raw status payload {
+  localDeviceId: 'livingRoomCeilingSpots',
+  resolvedMapping: {
+    localDeviceId: 'livingRoomCeilingSpots',
+    tuyaDeviceId: 'bfae97a0468699bf6es1mx',
+    commandCode: 'switch_2',
+    channelLabel: 'Living Room Ceiling Spots'
+  },
+  tuyaDeviceId: 'bfae97a0468699bf6es1mx',
+  commandCode: 'switch_2',
+  rawStatusPayload: [
+    { code: 'switch_1', value: false },
+    { code: 'switch_2', value: false },
+    { code: 'countdown_1', value: 0 },
+    { code: 'countdown_2', value: 0 },
+    { code: 'relay_status', value: '2' },
+    { code: 'random_time', value: '' },
+    { code: 'cycle_time', value: '' },
+    { code: 'switch_inching', value: 'AAACAgAC' },
+    { code: 'switch_type', value: 'flip' },
+    { code: 'switch_interlock', value: '' }
+  ],
+  matchedStatusEntry: { code: 'switch_2', value: false },
+  derivedState: false,
+  pendingState: null
+}
+[Tuya local-devices] resolved device state {
+  localDeviceId: 'livingRoomCeilingSpots',
+  resolvedMapping: {
+    localDeviceId: 'livingRoomCeilingSpots',
+    tuyaDeviceId: 'bfae97a0468699bf6es1mx',
+    commandCode: 'switch_2',
+    channelLabel: 'Living Room Ceiling Spots'
+  },
+  tuyaDeviceId: 'bfae97a0468699bf6es1mx',
+  commandCode: 'switch_2',
+  matchedStatusEntry: { code: 'switch_2', value: false },
+  resolvedState: false
+}

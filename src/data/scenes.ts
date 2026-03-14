@@ -1,0 +1,93 @@
+import { BedDouble, Heart, MoonStar, Palmtree, Sunset, Waves } from "lucide-react";
+import type { Scene } from "@/types/models";
+
+export const sceneSeed: Scene[] = [
+  {
+    id: "evening-mode",
+    name: "מצב ערב",
+    icon: Sunset,
+    description: "תאורת ערב מזמינה שמכינה את הווילה לרוגע ונוכחות.",
+    mood: "איזון בין חמימות, נראות ותחושת אירוח",
+    accent: "from-amber-300/25 via-yellow-500/10 to-transparent",
+    actions: [
+      { deviceId: "garden-light", targetState: "on" },
+      { deviceId: "pergola-light", targetState: "on" },
+      { deviceId: "pool-light", targetState: "on" },
+    ],
+  },
+  {
+    id: "romantic-mode",
+    name: "מצב רומנטי",
+    icon: Heart,
+    description: "תאורה רכה ומדויקת לערב אינטימי עם אווירה שקטה.",
+    mood: "אלגנטיות עמומה עם נוכחות עדינה",
+    accent: "from-rose-300/25 via-fuchsia-500/10 to-transparent",
+    actions: [
+      { deviceId: "ambient-light", targetState: "on" },
+      { deviceId: "pool-light", targetState: "on" },
+      { deviceId: "living-light", targetState: "off" },
+      { deviceId: "outdoor-light", targetState: "off" },
+    ],
+  },
+  {
+    id: "pool-mode",
+    name: "מצב בריכה",
+    icon: Waves,
+    description: "מדגיש את אזור הבריכה והחוץ לאירוח לילי מרשים.",
+    mood: "כחול, פתוח ומזמין",
+    accent: "from-cyan-300/25 via-sky-500/10 to-transparent",
+    actions: [
+      { deviceId: "pool-light", targetState: "on" },
+      { deviceId: "garden-light", targetState: "on" },
+      { deviceId: "outdoor-light", targetState: "on" },
+    ],
+  },
+  {
+    id: "night-mode",
+    name: "מצב לילה",
+    icon: MoonStar,
+    description: "משאיר רק אור רך ונעים לשעות הלילה המאוחרות.",
+    mood: "שקט, מינימלי ומרגיע",
+    accent: "from-indigo-300/20 via-slate-500/10 to-transparent",
+    actions: [
+      { deviceId: "ambient-light", targetState: "on" },
+      { deviceId: "room-light", targetState: "off" },
+      { deviceId: "living-light", targetState: "off" },
+      { deviceId: "garden-light", targetState: "off" },
+      { deviceId: "pergola-light", targetState: "off" },
+      { deviceId: "outdoor-light", targetState: "off" },
+    ],
+  },
+  {
+    id: "away-mode",
+    name: "מצב יציאה",
+    icon: BedDouble,
+    description: "מכבה את כלל התאורות לפני יציאה מהווילה.",
+    mood: "כיבוי מלא, מסודר ובטוח",
+    accent: "from-stone-300/20 via-zinc-500/10 to-transparent",
+    actions: [
+      { deviceId: "room-light", targetState: "off" },
+      { deviceId: "living-light", targetState: "off" },
+      { deviceId: "garden-light", targetState: "off" },
+      { deviceId: "pergola-light", targetState: "off" },
+      { deviceId: "outdoor-light", targetState: "off" },
+      { deviceId: "ambient-light", targetState: "off" },
+      { deviceId: "pool-light", targetState: "off" },
+    ],
+  },
+  {
+    id: "villa-glow",
+    name: "זוהר הווילה",
+    icon: Palmtree,
+    description: "מראה חתימה יוקרתי שמציג את הווילה במלוא היופי שלה.",
+    mood: "הצגה דרמטית עם תחושת פרימיום",
+    accent: "from-amber-300/25 via-sky-400/10 to-transparent",
+    actions: [
+      { deviceId: "living-light", targetState: "on" },
+      { deviceId: "garden-light", targetState: "on" },
+      { deviceId: "pergola-light", targetState: "on" },
+      { deviceId: "ambient-light", targetState: "on" },
+      { deviceId: "pool-light", targetState: "on" },
+    ],
+  },
+];
