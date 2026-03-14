@@ -1,9 +1,14 @@
-const CACHE_NAME = "royal-water-villa-v1";
-const APP_SHELL = ["/", "/manifest.webmanifest", "/icons/icon-192.svg", "/icons/icon-512.svg"];
+const STATIC_CACHE = "royal-water-villa-static-v2";
+const RUNTIME_CACHE = "royal-water-villa-runtime-v2";
+const STATIC_ASSETS = [
+  "/manifest.webmanifest",
+  "/icons/icon-192.png",
+  "/icons/icon-512.png",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)),
+    caches.open(STATIC_CACHE).then((cache) => cache.addAll(STATIC_ASSETS)),
   );
   self.skipWaiting();
 });
@@ -11,7 +16,11 @@ self.addEventListener("install", (event) => {
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))),
+      Promise.all(
+        keys
+          .filter((key) => key !== STATIC_CACHE && key !== RUNTIME_CACHE)
+          .map((key) => caches.delete(key)),
+      ),
     ),
   );
   self.clients.claim();
@@ -30,22 +39,40 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  event.respondWith(
-    caches.match(request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-
-      return fetch(request).then((networkResponse) => {
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== "basic") {
+  if (request.mode === "navigate") {
+    event.respondWith(
+      fetch(request)
+        .then((networkResponse) => {
+          const responseClone = networkResponse.clone();
+          void caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, responseClone));
           return networkResponse;
+        })
+        .catch(async () => {
+          const cachedResponse = await caches.match(request);
+          return cachedResponse || Response.error();
+        }),
+    );
+    return;
+  }
+
+  if (STATIC_ASSETS.includes(url.pathname)) {
+    event.respondWith(
+      caches.match(request).then((cachedResponse) => {
+        if (cachedResponse) {
+          return cachedResponse;
         }
 
-        const responseClone = networkResponse.clone();
-        void caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
+        return fetch(request).then((networkResponse) => {
+          const responseClone = networkResponse.clone();
+          void caches.open(STATIC_CACHE).then((cache) => cache.put(request, responseClone));
+          return networkResponse;
+        });
+      }),
+    );
+    return;
+  }
 
-        return networkResponse;
-      });
-    }),
+  event.respondWith(
+    fetch(request),
   );
 });

@@ -8,7 +8,9 @@ export function PwaRegistrar() {
       return;
     }
 
-    void navigator.serviceWorker.register("/sw.js");
+    void navigator.serviceWorker.register("/sw.js").then((registration) => {
+      void registration.update();
+    });
   }, []);
 
   return null;
